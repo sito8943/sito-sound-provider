@@ -1,0 +1,38 @@
+{
+  "name": "sito-sound-provider",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "lint-staged": "lint-staged",
+    "prettier": "prettier . --check",
+    "prettier:write": "prettier . --write",
+    "test": "vitest run"
+  },
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2",
+    "vitest": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --max-warnings=0 --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,mjs}": "prettier --write"
+  }
+}
